@@ -1,5 +1,5 @@
 [package]
-name = "raster"
+name = "raster-fork"
 version = "0.2.1"
 license = "MIT"
 authors = ["kosinix <kosinix@users.noreply.github.com>"]
@@ -15,15 +15,13 @@ readme = "README.md"
 description = "Image processing lib for Rust"
 documentation = "https://docs.rs/raster/"
 homepage = "https://github.com/kosinix/raster"
-repository = "https://github.com/kosinix/raster.git"
+repository = "https://github.com/pjtunstall/raster"
 
-[dependencies.image]
-version = "0.19"
-default-features = false
-features = ["jpeg", "jpeg_rayon"]
+[dependencies]
+num-bigint = "0.4.6"  # or the latest stable version
+num-rational = "0.4.5" # or the latest stable version
+image = { version = "0.19", default-features = false, features = ["jpeg", "jpeg_rayon"] }
+gif = "0.10"
+png = "0.12"
 
-[dependencies.gif]
-version = "0.10"
-
-[dependencies.png]
-version = "0.12"
+description = "Fork of the raster crate for Rust, updated to resolve dependency issues."
